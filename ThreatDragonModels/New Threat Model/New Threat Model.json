@@ -31,8 +31,8 @@
                 "text": "Browser Client"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -128,9 +128,27 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "cec57d0d-5b8b-450a-ad8d-604a3fcb468d",
+                  "title": "Spoofing in the Browser Client",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Spoofing on the browser client involves tricking a user or system into believing that a malicious entity is a legitimate one. This can include manipulating the browser to impersonate a trusted website or application, such as through fake login pages (phishing), malicious scripts, or tampered browser extensions. The goal is often to steal credentials, session tokens, or sensitive data by deceiving the user or bypassing client-side trust mechanisms.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -270,8 +288,8 @@
                 "text": "Web \nApplication"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -367,12 +385,34 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "ad2ee2ef-e57b-47bd-ac1f-ecacc2662da8",
+                  "title": "Web Application Spoofing",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Web application spoofing is a type of attack where a malicious actor mimics a legitimate web application to deceive users into interacting with a fake interface. This can involve creating a visually identical site or manipulating URLs (e.g., using typosquatting or subdomain tricks) to trick users into revealing sensitive information like login credentials or payment details. The attacker exploits users’ trust in a familiar interface, often as part of phishing campaigns or man-in-the-middle attacks.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -491,7 +531,29 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "693ab4bb-0210-46c6-8612-618bba91154c",
+                  "title": "Elevation of Privilege",
+                  "status": "NotApplicable",
+                  "severity": "TBD",
+                  "type": "Elevation of privilege",
+                  "description": "Elevation of privilege occurs when an attacker gains unauthorized access to higher-level permissions or roles within an application. In the context of an authorization provider, this threat arises when flaws in the authorization logic allow users to access resources or perform actions beyond their assigned privileges. This can result from misconfigured roles, insecure token handling, or bypassing access control checks.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -508,8 +570,8 @@
                 "text": "LDAP"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -605,12 +667,34 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "bcf86b6a-03bb-4340-90d9-7517199a25f8",
+                  "title": "Tampering With The Data Using The SQL Injection Attack",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Some systems improperly integrate LDAP queries with backend SQL databases. If user input is not properly sanitized, an attacker may inject malicious SQL code through LDAP-related interfaces. This can lead to tampering with data, such as unauthorized modification of user records or privileges, compromising the integrity and security of the directory service.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -1207,6 +1291,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 5
   }
 }
